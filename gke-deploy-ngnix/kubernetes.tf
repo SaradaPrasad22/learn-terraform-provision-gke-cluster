@@ -108,3 +108,7 @@ resource "kubernetes_service" "nginx" {
   }
 }
 
+# Adding output to get the ip address to access ngnix
+output "lb_ip" {
+  value = kubernetes_service.nginx.status.0.load_balancer.0.ingress.0.ip
+}
