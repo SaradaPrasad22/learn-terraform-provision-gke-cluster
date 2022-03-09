@@ -15,8 +15,8 @@ data "terraform_remote_state" "gke" {
   backend = "local"
 
   config = {
-    # path = "/bitnami/jenkins/home/workspace/SetupGKECluster/terraform.tfstate"
-    path = "/${local.workspace}/SetupGKECluster/terraform.tfstate"
+    path = "/bitnami/jenkins/home/workspace/SetupGKECluster/terraform.tfstate"
+    # path = "/${local.workspace}/SetupGKECluster/terraform.tfstate"
   }
 }
 
